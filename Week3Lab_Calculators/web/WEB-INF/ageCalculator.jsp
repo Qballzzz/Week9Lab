@@ -1,6 +1,6 @@
 <%-- 
     Document   : ageCalculator
-    Created on : 26-Jan-2023, 3:52:28 PM
+    Created on : 26-Jan-2023, 4:31:41 PM
     Author     : qball
 --%>
 
@@ -12,6 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Age Calculator</h1>
+        Enter your current age:
+        <input type="text" 
     </body>
 </html>
