@@ -13,7 +13,13 @@
     </head>
     <body>
         <h1>Age Calculator</h1>
-        Enter your current age:
-        <input type="text" 
+        <form action="Age" method="post">
+            Enter your age:
+            <input type="text" name="age" value="${age}">
+            <br>
+            <input type="submit" value="Age Next Birthday"><br>
+            ${ageNext}
+        </form>
+        <a href="/WEB-INF/arithmeticCalculator.jsp">Arithmetic Calculator</a>
     </body>
 </html>
