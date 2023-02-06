@@ -12,12 +12,12 @@
         <title>Simple Note Keeper</title>
     </head>
     <body>
-        <form action="NoteServlet" method="post">
+        <form action="NoteServlet" method="get">
             <h1>Simple Note Keeper</h1>
             <h2>View Note</h2>
             <b>Title: </b><input type="text" value="${note.title}"><br><br>
-            <b>Contents:</b><br><input type="text" value="${note.contents}"><br><br>
-            <input type="submit" value="Save">
+            <b>Contents: </b><br><input type="text" value="${note.contents}"><br><br>
+            <input type="submit" method="post" value="Save">
         </form>
     </body>
 </html>

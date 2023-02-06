@@ -12,12 +12,10 @@
         <title>Simple Note Keeper</title>
     </head>
     <body>
-        <form action="NoteServlet" method="post">
-            <h1>Simple Note Keeper</h1>
-            <h2>View Note</h2>
-            <p><b>Title: </b>${note.title}</p>
-            <p><b>Contents:</b><br>${note.contents}</p><br>
-            <a href="note?edit">Edit</a>
-        </form>
+        <h1>Simple Note Keeper</h1>
+        <h2>View Note</h2>
+        <b>Title: </b>${note.title}<br>
+        <b>Contents: </b><br>${note.contents}<br>
+        <a href="note?edit">Edit
     </body>
 </html>
