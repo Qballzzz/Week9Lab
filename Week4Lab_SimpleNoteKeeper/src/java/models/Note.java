@@ -14,7 +14,9 @@ import java.io.Serializable;
 public class Note implements Serializable{
     private String title;
     private String contents;
-    public Note(){
+    public Note() {
+        title = "";
+        contents = "";
     }
     public Note(String title, String contents){
         this.title = title;
