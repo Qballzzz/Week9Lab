@@ -10,5 +10,22 @@ package models;
  * @author qball
  */
 public class Role {
-    
+   public int id;
+   public String name;
+
+    public Role(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    public Role(int id){
+        this.id = id;
+    }
+   
+   public String getName(){
+       return name;
+   }
+   
+   public int getId(){
+       return id;
+   }
 }
