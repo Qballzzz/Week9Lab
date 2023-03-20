@@ -1,7 +1,7 @@
 package servlets;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,10 +19,10 @@ public class UserServlet extends HttpServlet {
             throws ServletException, IOException {
         UserDB DBconnection = new UserDB();
         RoleDB roleConnection = new RoleDB();
-        ArrayList<User> users = new ArrayList<>();
-        ArrayList<Role> roles = new ArrayList<>();
-        users = (ArrayList<User>)DBconnection.getall();
-        roles = (ArrayList<Role>)roleConnection.getall();
+        List<User> users = new ArrayList<>();
+        List<Role> roles = new ArrayList<>();
+        users = (List<User>)DBconnection.getall();
+        roles = (List<Role>)roleConnection.getall();
         int size = users.size();
         if (size == 0){
             request.setAttribute("people", "no");
@@ -61,7 +61,7 @@ public class UserServlet extends HttpServlet {
             else{
                 DBconnection.updateUser(email, fname, lname, pass, roleIdNum);
             }
-            ArrayList<User> updateUsers = (ArrayList<User>)DBconnection.getall();
+            List<User> updateUsers = (List<User>)DBconnection.getall();
             request.setAttribute("users", updateUsers);
             String bottom = "Add User";
             request.setAttribute("subTitle", bottom);
@@ -71,7 +71,7 @@ public class UserServlet extends HttpServlet {
             DBconnection.delete(email);
             String bottom = "Add User";
             request.setAttribute("subTitle", bottom);
-            ArrayList<User> updateUsers = (ArrayList<User>)DBconnection.getall();
+            List<User> updateUsers = (List<User>)DBconnection.getall();
             request.setAttribute("users", updateUsers);
             
         }
@@ -99,13 +99,13 @@ public class UserServlet extends HttpServlet {
             int role = Integer.parseInt(roleId);
             DBconnection.addUser(email, firstname, lastname, password, role);
         }
-            ArrayList<User> updateUsers = (ArrayList<User>)DBconnection.getall();
+            List<User> updateUsers = (List<User>)DBconnection.getall();
             request.setAttribute("users", updateUsers);
             String bottom = "Add User";
             request.setAttribute("subTitle", bottom);
             RoleDB roleConnection = new RoleDB();
-            ArrayList<Role> roles = new ArrayList<>();
-            roles = (ArrayList<Role>)roleConnection.getall();
+            List<Role> roles = new ArrayList<>();
+            roles = (List<Role>)roleConnection.getall();
             request.setAttribute("roles", roles);
         
         
